@@ -8,6 +8,7 @@
 #define __MFD_MT6397_CORE_H__
 
 #include <linux/notifier.h>
+#include <linux/mutex.h>
 
 enum chip_id {
 	MT6323_CHIP_ID = 0x23,
