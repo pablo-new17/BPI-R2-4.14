@@ -4,15 +4,19 @@
 
 ## 環境需求
 
-On a x86/x64-host you need cross compile tools for the armhf architecture (bison and flex-package are needed for kernels >=4.16):
+在 Intel x86/x64 主機上編譯，你需要 armhf 架構的 cross compile 工具(包含 bison 及 flex-package 程式，當 kernels >=4.16):
 ```sh
 sudo apt install gcc-arm-linux-gnueabihf libc6-armhf-cross u-boot-tools bc make gcc libc6-dev libncurses5-dev libssl-dev bison flex
 ```
-If you build it directly on the BananaPi-R2 (not recommended) you do not need the crosscompile-packages gcc-arm-linux-gnueabihf and libc6-armhf-cross
+若是，直接在 BananaPi-R2 板子上編譯，就不需要 crosscompile-packages 包含 gcc-arm-linux-gnueabihf 及 libc6-armhf-cross (但不建議在R2 板子上編譯，會很慢)
 
-## Issues
+```sh
+sudo apt install u-boot-tools bc make gcc libc6-dev libncurses5-dev libssl-dev bison flex
+```
 
-## Usage
+## 相關事宜
+
+## 使用方法
 
 ```sh
   ./build.sh importconfig
